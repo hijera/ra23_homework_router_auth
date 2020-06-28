@@ -17,6 +17,7 @@ export default function AuthProvider(props) {
             });
 
             if (response.status === 401) {
+                history.push("/");
                 handleLogout();
             }
 
@@ -28,14 +29,16 @@ export default function AuthProvider(props) {
                 });
 
                 if (responseProfile.status === 401) {
+                    history.push("/");
                     handleLogout();
                 }
 
                 if (responseProfile.ok) {
                     const profile = await responseProfile.json();
-                    history.push("/news");
+
                     setProfile(profile);
                     setToken(token);
+                    history.push("/news");
                 }
             }
         } catch (e) {

@@ -9,7 +9,6 @@ AuthForm.propTypes = {};
 function AuthForm(props) {
     const [form, setForm] = useState({username: '', password: ''});
     const {handleLogin} = useContext(AuthContext);
-    const history = useHistory();
     const onFormChange = evt => {
         const {target} = evt;
         setForm({...form, [target.name]: target.value});
