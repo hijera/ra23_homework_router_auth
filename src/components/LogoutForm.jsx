@@ -9,7 +9,7 @@ function LogoutForm(props) {
     const {handleLogout, token, profile} = useContext(AuthContext);
     const handleSubmit = evt => {
         evt.preventDefault();
-        handleLogout(history);
+        handleLogout();
     };
 
     return (

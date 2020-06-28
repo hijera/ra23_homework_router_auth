@@ -8,11 +8,10 @@ Auth.propTypes = {};
 
 function Auth(props) {
     const {handleLogin, handleLogout, token, profile} = useContext(AuthContext);
-    const {history} = props;
     return (
         <>
-            {!token && <AuthForm history={history}/>}
-            {token && <LogoutForm history={history}/>}
+            {!token && <AuthForm {...props} />}
+            {token && <LogoutForm {...props} />}
         </>
     );
 }

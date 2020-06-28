@@ -43,7 +43,6 @@ export default function AuthProvider(props) {
         }
     };
     const handleLogout = () => {
-        console.log(history);
         history.push("/");
         setToken(null);
         setProfile(null);

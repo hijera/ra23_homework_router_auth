@@ -16,8 +16,7 @@ function AuthForm(props) {
 
     const onSubmit = evt => {
         evt.preventDefault();
-        console.log(history);
-        handleLogin(form.username, form.password,history);
+        handleLogin(form.username, form.password);
     };
 
     return (
