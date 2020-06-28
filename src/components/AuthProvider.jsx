@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import AuthContext from "../contexts/AuthContext";
 import useStorage from "../hooks/useStorage";
-import { useHistory } from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 export default function AuthProvider(props) {
-    const history =useHistory();
+    const history = useHistory();
     const [token, setToken] = useStorage(localStorage, 'token');
     const [profile, setProfile] = useStorage(localStorage, 'profile', true);
     const handleLogin = async (login = 'user', password = 'password') => {

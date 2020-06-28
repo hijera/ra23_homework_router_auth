@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import Bar from "./Bar";
 import NewsDetail from "./NewsDetail";
 
-NewsDetailPage.propTypes = {
-    
-};
+NewsDetailPage.propTypes = {};
 
 function NewsDetailPage(props) {
     return (

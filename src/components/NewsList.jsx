@@ -2,12 +2,13 @@ import React, {useContext, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import AuthContext from "../contexts/AuthContext";
 import NewsItem from "./NewsItem";
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+
 NewsList.propTypes = {};
 
 function NewsList(props) {
     const {token, handleLogout} = useContext(AuthContext);
-    const [ news,setNews ] = useState([]);
+    const [news, setNews] = useState([]);
     const getNews = async () => {
         try {
             const response = await fetch(process.env.REACT_APP_HOST + process.env.REACT_APP_NEWS_LINK, {
@@ -37,7 +38,7 @@ function NewsList(props) {
             {token &&
             <div className={"card-deck newslist"}>
                 {news.map(item =>
-                    <Link className="card news-card" to={"/news/"+item.id}>
+                    <Link className="card news-card" to={"/news/" + item.id}>
                         <NewsItem key={item.id} {...item} />
                     </Link>)}
             </div>

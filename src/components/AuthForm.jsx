@@ -2,7 +2,8 @@ import React, {useState, useContext} from 'react';
 import PropTypes from 'prop-types';
 import '../css/bootstrap.css';
 import AuthContext from "../contexts/AuthContext";
-import { useHistory } from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
+
 AuthForm.propTypes = {};
 
 function AuthForm(props) {

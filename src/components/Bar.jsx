@@ -5,10 +5,9 @@ import '../css/bootstrap.css';
 import AuthContext from "../contexts/AuthContext";
 import LogoutForm from "./LogoutForm";
 import Auth from "./Auth";
-import { useHistory } from 'react-router-dom';
-Bar.propTypes = {
+import {useHistory} from 'react-router-dom';
 
-};
+Bar.propTypes = {};
 
 function Bar(props) {
     const history = useHistory();
@@ -17,9 +16,8 @@ function Bar(props) {
             <div className="container">
                 <div className="navbar-header navbar-brand">Leto Social</div>
                 <div className="navbar-collapse ">
-
                 </div>
-                <Auth history={history} />
+                <Auth history={history}/>
             </div>
         </nav>
     );
